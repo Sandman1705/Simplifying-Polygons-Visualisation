@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AboutWindow</class>
+ <widget class="QDialog" name="AboutWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>593</width>
+    <height>346</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Uputstvo</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Zatvori</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="3">
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>575</width>
+        <height>299</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QTextEdit" name="textEdit">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Pojednostavljivanje poligona &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Oba algoritma su originalno za pojednostavljvanje poligonalnih linija a ovde su primenjeni na poligone. Algoritmi su neka vrsta aproksimacije poligona pa ne možemo da kažemo da je jedan algoritam bolji od drugog, tj. ni za jedno rešenje ne možemo da kažemo da je optimalno. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;OPISI ALGORITAMA:&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; color:#00ad00;&quot;&gt;Ramer-Douglas-Peucker&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; je rekurzivni algoritam koji ima prosečnu složenost O(N*log(N)) a najgoru O(N&lt;/span&gt;&lt;span style=&quot; font-size:9pt; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;). Algoritam počinje od 2 tačke, prve P i poslednje K u liniji, i one su prve koje ulaze u rezultat. Zatim traži tačku T na poligonalnoj liniji koja je najudaljenija od prave koja prolazi kroz tačke P i K. Tačka T se dodaje u rezultat. Zatim se rekurzivno poziva algoritam za liniju od P do T i od T do K. Rekurzija se zaustavlja kada rastojanje (od T do linije PK) postane manje od nekog epsilon. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Prilikom vizuelizacije se ne zadaje epsilon već broj temena za crtanje, dok oznaka tolerancija označava koje epsilon daje taj broj temena.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; color:#eb0505;&quot;&gt;Visvalingam-Whyatt&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; je drugi algoritam. Za razliku od RDP ovaj algoritam radi u suprotnom smeru. Umesto da krene od 2 tačke i dodaju nove ovde se kreće od celog poligona i uklanjaju se temena za koja se procenjuje da će imati najmanju uticaj na promenu poligona. Kriterijum za procenu je promena površine koja bi nastala ako bi se ta tačka uklonila. Površina se računa u svakoj tački poligona kao površina trougla koji čine ta tačka i njen levi i desni sused. Ovaj pristup sa prirodnije preslikava sa poligonalne linije na poligon zato što svaka tačka ima i levog i desnog suseda kod poligona sa 3 tačke ili više. Algoritam je iterativan. U svakoj iteraciji se izbacuje tačka koja određuje najmanju površinu, a njeni susedi se koriguju jer sada određuju drugu površinu. Iteriranje se zaustavlja kada ostanu samo 3 tačke. Složenost je O(N*log(N)).&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Prilikom vizuelizacije se zadaje broj temena kada želimo da zaustavimo algoritam. &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;KORIŠĆENJE PROGRAMA:&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;&lt;li style=&quot; font-size:8pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dugme &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;&amp;quot;Učitaj iz fajla&amp;quot;&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; nudi dijalog za unos tekstualne datoteke koja sadrži koordinate temena poligona. Fajl u sebi mora da sadrži barem 3 temena. Svako teme je par decimalnih brojeva odvojeni belinama. Tačke su takođe odvojene belinama. Npr: 10 10 10 20 20 10 20 20 &lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Dugme &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Generiši nasumično&amp;quot;&lt;/span&gt; generiše prost poligon za koji će se pokrenuti navedeni algoritmi. Broj temena koji se uzima sa generisanje poligona je zadat uz pomoć &amp;quot;spin box&amp;quot;-a levo od dugmeta. &lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Dugme &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Interaktivan unos&amp;quot;&lt;/span&gt; služi za unos koordinata direktno iz programa. Koordinate temena poligona se unose tako što se u polja &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;X&amp;quot;&lt;/span&gt; i &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Y&amp;quot;&lt;/span&gt; unesu odgovarajuće vrednosti. Dugme &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Dodaj teme&amp;quot;&lt;/span&gt; uzima unete vrednosti i pamti ih u nizu temena. Za svako novo teme postupak se ponavlja. Temena se prikazuju od drugog unetog temena. Plava linija (default boja) je deo poligona koje će biti napravljen od zadatih temena, a crvena (default boja) predstavlja ostatak koji će postojati ako unos završimo u tom trenutku. Unos se završava pritiskom na dugme &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Kraj&amp;quot;&lt;/span&gt; koje se pojavljuje na mestu dugmeta &lt;span style=&quot; font-style:italic;&quot;&gt;&amp;quot;Interaktivan unos&amp;quot;&lt;/span&gt;. &lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;&amp;quot;Check box&amp;quot;&lt;/span&gt;-ovi služe sa biranje poligona koji se crtaju: &lt;/li&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 2;&quot;&gt;&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Ceo poligon&amp;quot;&lt;/span&gt; crta uneti poligon &lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Temena&amp;quot;&lt;/span&gt; označava sva temena unetog poligona &lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Ramer-Douglas-Peucker&amp;quot;&lt;/span&gt; prikazuje rezultat RDP algoritma &lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Visvalingam-Whyatt&amp;quot;&lt;/span&gt; prikazuje rezultat WV algoritma&lt;/li&gt;&lt;/ul&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;&amp;quot;Check box&amp;quot;&lt;/span&gt; &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;AntiAliasing&amp;quot;&lt;/span&gt; služi da uključi ili isključi AntiAliasing pri crtanju&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Dugme &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Boje&amp;quot;&lt;/span&gt; otvara novi prozor gde se mogu promeniti sve boje koje se koriste u prikazu.&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gornji slajder&lt;/span&gt; kontroliše broj tačaka RDP algoritma (min 2, max sva temena) &lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Donji slajder&lt;/span&gt; kontroliše broj tačaka WV algoritma (min 3, max sva temena) (napomena: za unos 2 se crtaju 3 tačke) &lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Oznaka &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Min. tolerancija&amp;quot;&lt;/span&gt; predstavlja koja je minimalna tolerancija za RDP algoritam koja daje trenutni prikaz. &lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Oznaka &lt;span style=&quot; font-weight:600;&quot;&gt;&amp;quot;Sledeća primena&amp;quot;&lt;/span&gt; prestavlja koja će biti promena površine poligona kada se broj tačaka VW prikaza smanji za 1. &lt;/li&gt;&lt;/ul&gt;
+&lt;p style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt; Autor: Mirko Brkušanin &lt;br /&gt; Matematički fakultet, Beograd, Januar 2017. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AboutWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>333</x>
+     <y>336</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>256</x>
+     <y>228</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
