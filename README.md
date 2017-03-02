@@ -7,6 +7,8 @@ Note: User interface is in Serbian.
 * Tools and Libs: Qt
 * IDE: QtCreator
 
-This was a student project made for course <b>Computational geometry</b> in Faculty of Mathematics, University of Belgrade of academic year 2016/2017
+January 2017
 
-Ovo je studentski projekat urađen za kurs <b>Geometrijski algoritmi (Računska geometrija)</b> na Matematičkom fakultetu u Beogradu akademske 2016/2017
+This was a student project made for course <b>Computational geometry</b> in Faculty of Mathematics, University of Belgrade of academic year 2016/2017.
+
+Ovo je studentski projekat urađen za kurs <b>Geometrijski algoritmi (Računska geometrija)</b> na Matematičkom fakultetu u Beogradu akademske 2016/2017.
